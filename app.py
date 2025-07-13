@@ -23,6 +23,11 @@ def requires_auth(f):
         return f(*args, **kwargs)
     return decorated
 
+# ✅ New Home Route
+@app.route('/')
+def home():
+    return "<h2>Hi, I am Shravan K 👋</h2>"
+
 @app.route('/predict', methods=['POST'])
 @requires_auth
 def predict():
